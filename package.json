@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "play": "pnpm --filter play dev",
+    "story": "pnpm --filter play storybook",
     "docs:dev": "pnpm --filter docs dev",
     "docs:build": "pnpm --filter docs build",
     "docs:preview": "pnpm --filter docs preview",
-    "test": "echo 'to do'"
+    "test": "pnpm --filter @ak-ui/components test"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +21,9 @@
     "@vitejs/plugin-vue": "^5.2.4",
     "@vitejs/plugin-vue-jsx": "^3.1.0",
     "@vue/tsconfig": "^0.5.1",
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/vue-fontawesome": "^3.0.8",
     "postcss-color-mix": "^1.1.0",
     "postcss-each": "^1.1.0",
     "postcss-each-variables": "^0.3.0",

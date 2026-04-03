@@ -1,1 +1,75 @@
 @import './reset.css';
+
+:root {
+  /* colors */
+  --ak-color-white: #ffffff;
+  --ak-color-black: #000000;
+  --colors: (
+    primary: #409eff,
+    success: #67c23a,
+    warning: #e6a23c,
+    danger: #f56c6c,
+    info: #909399
+  );
+  --ak-bg-color: #ffffff;
+  --ak-bg-color-page: #f2f3f5;
+  --ak-bg-color-overlay: #ffffff;
+  --ak-text-color-primary: #303133;
+  --ak-text-color-regular: #606266;
+  --ak-text-color-secondary: #909399;
+  --ak-text-color-placeholder: #a8abb2;
+  --ak-text-color-disabled: #c0c4cc;
+  --ak-border-color: #dcdfe6;
+  --ak-border-color-light: #e4e7ed;
+  --ak-border-color-lighter: #ebeef5;
+  --ak-border-color-extra-light: #f2f6fc;
+  --ak-border-color-dark: #d4d7de;
+  --ak-border-color-darker: #cdd0d6;
+  --ak-fill-color: #f0f2f5;
+  --ak-fill-color-light: #f5f7fa;
+  --ak-fill-color-lighter: #fafafa;
+  --ak-fill-color-extra-light: #fafcff;
+  --ak-fill-color-dark: #ebedf0;
+  --ak-fill-color-darker: #e6e8eb;
+  --ak-fill-color-blank: #ffffff;
+
+  @each $val, $color in var(--colors) {
+    --ak-color-$(val): $(color);
+    @for $i from 3 to 9 {
+      --ak-color-$(val)-light-$(i): mix(#fff, $(color), .$(i));
+    }
+    --ak-color-$(val)-dark-2: mix(#000, $(color), 0.2);
+  }
+
+  /* border */
+  --ak-border-width: 1px;
+  --ak-border-style: solid;
+  --ak-border-color-hover: var(--ak-text-color-disabled);
+  --ak-border: var(--ak-border-width) var(--ak-border-style)
+    var(--ak-border-color);
+  --ak-border-radius-base: 4px;
+  --ak-border-radius-small: 2px;
+  --ak-border-radius-round: 20px;
+  --ak-border-radius-circle: 100%;
+
+  /*font*/
+  --ak-font-size-extra-large: 20px;
+  --ak-font-size-large: 18px;
+  --ak-font-size-medium: 16px;
+  --ak-font-size-base: 14px;
+  --ak-font-size-small: 13px;
+  --ak-font-size-extra-small: 12px;
+  --ak-font-family:
+    'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', '\5fae\8f6f\96c5\9ed1', Arial, sans-serif;
+  --ak-font-weight-primary: 500;
+
+  /*disabled*/
+  --ak-disabled-bg-color: var(--ak-fill-color-light);
+  --ak-disabled-text-color: var(--ak-text-color-placeholder);
+  --ak-disabled-border-color: var(--ak-border-color-light);
+
+  /*animation*/
+  --ak-transition-duration: 0.4s;
+  --ak-transition-duration-fast: 0.2s;
+}

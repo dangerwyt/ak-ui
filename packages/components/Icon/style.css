@@ -1,0 +1,16 @@
+.ak-icon {
+  --ak-icon-color: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  fill: currentColor;
+  color: var(--ak-icon-color);
+  font-size: inherit;
+}
+
+@each $val in primary, info, success, warning, danger {
+  .ak-icon--$(val) {
+    --ak-icon-color: var(--ak-color-$(val));
+  }
+}
