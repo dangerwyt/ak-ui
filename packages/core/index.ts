@@ -7,5 +7,5 @@ import '@ak-ui/theme/index.css';
 library.add(fas);
 const installer = makeInstaller(components);
 
-export * from '@ak-ui/components';
+export * from '../components';
 export default installer;

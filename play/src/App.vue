@@ -6,4 +6,13 @@
   <div>
     <ak-icon type="danger" icon="edit"></ak-icon>
   </div>
+
+  <div>
+    <ak-button-group>
+      <ak-button type="primary" size="large" icon="edit" round>编辑</ak-button>
+      <ak-button type="primary" size="large" icon="search" round>
+        搜索
+      </ak-button>
+    </ak-button-group>
+  </div>
 </template>
