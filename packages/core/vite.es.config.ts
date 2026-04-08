@@ -5,26 +5,6 @@ import { readdirSync } from 'fs';
 import { filter, map } from 'lodash-es';
 import dts from 'vite-plugin-dts';
 
-const COMP_NAME = [
-  'Alert',
-  'Button',
-  'Collapse',
-  'Dropdown',
-  'Form',
-  'Icon',
-  'Input',
-  'Loading',
-  'Message',
-  'MessageBox',
-  'Notification',
-  'Overlay',
-  'Popconfirm',
-  'Select',
-  'Switch',
-  'Tooltip',
-  'Upload',
-] as const;
-
 function getDirectoriesSync(basePath: string) {
   const entries = readdirSync(basePath, { withFileTypes: true });
   return map(
