@@ -46,7 +46,7 @@ export default defineConfig({
           return assetInfo.name as string;
         },
         manualChunks(id) {
-          console.log(id);
+          // console.log(id);
           if (id.includes('node_modules')) {
             return 'vendor';
           }
