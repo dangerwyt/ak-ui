@@ -1,4 +1,4 @@
-.ak-icon {
+.aka-icon {
   --ak-icon-color: inherit;
   display: inline-flex;
   align-items: center;
@@ -10,7 +10,7 @@
 }
 
 @each $val in primary, info, success, warning, danger {
-  .ak-icon--$(val) {
-    --ak-icon-color: var(--ak-color-$(val));
+  .aka-icon--$(val) {
+    --ak-icon-color: var(--aka-color-$(val));
   }
 }

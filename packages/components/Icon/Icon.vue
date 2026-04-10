@@ -4,7 +4,7 @@
   import { omit } from 'lodash-es';
   import { computed } from 'vue';
   defineOptions({
-    name: 'AkIcon',
+    name: 'AkaIcon',
     inheritAttrs: false,
   });
 
@@ -17,9 +17,9 @@
 
 <template>
   <i
-    class="ak-icon"
+    class="aka-icon"
     :class="{
-      [`ak-icon--${props.type}`]: props.type,
+      [`aka-icon--${props.type}`]: props.type,
     }"
     :style="customStyle"
     v-bind="$attrs"

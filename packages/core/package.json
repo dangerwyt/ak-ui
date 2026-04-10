@@ -1,6 +1,6 @@
 {
-  "name": "ak-ui",
-  "version": "1.0.1",
+  "name": "aka-element",
+  "version": "1.0.0",
   "description": "Components library by Vue3 + Ts",
   "type": "module",
   "main": "./dist/umd/index.umd.cjs",
@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "vite-plugin-dts": "^3.9.1",
-    "@ak-ui/components": "workspace:*"
+    "@aka-element/components": "workspace:*"
   },
   "peerDependencies": {
     "vue": "^3.5.31"

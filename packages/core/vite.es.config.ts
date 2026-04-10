@@ -25,7 +25,7 @@ export default defineConfig({
     outDir: 'dist/es',
     lib: {
       entry: resolve(__dirname, './index.ts'),
-      name: 'AKUI',
+      name: 'AKAUI',
       fileName: 'index',
       formats: ['es'],
     },
@@ -56,9 +56,7 @@ export default defineConfig({
           if (id.includes('hooks')) {
             return 'hooks';
           }
-          for (const name of getDirectoriesSync(
-            resolve(__dirname, '../components')
-          )) {
+          for (const name of getDirectoriesSync('../components')) {
             if (id.includes(`/packages/components/${name}`)) {
               return name;
             }

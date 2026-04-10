@@ -1,5 +1,5 @@
 {
-  "name": "ak-monorepo",
+  "name": "aka-element",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,8 +9,8 @@
     "docs:dev": "pnpm --filter docs dev",
     "docs:build": "pnpm --filter docs build",
     "docs:preview": "pnpm --filter docs preview",
-    "test": "pnpm --filter @ak-ui/components test",
-    "build": "pnpm --filter ak-ui build"
+    "test": "pnpm --filter @aka-element/components test",
+    "build": "pnpm --filter aka-element build"
   },
   "keywords": [],
   "author": "",
@@ -43,10 +43,10 @@
     "vue-tsc": "^1.8.27"
   },
   "dependencies": {
-    "@ak-ui/hooks": "workspace:*",
-    "@ak-ui/theme": "workspace:*",
-    "@ak-ui/utils": "workspace:*",
-    "ak-ui": "workspace:*",
+    "@aka-element/hooks": "workspace:*",
+    "@aka-element/theme": "workspace:*",
+    "@aka-element/utils": "workspace:*",
+    "aka-element": "workspace:*",
     "lodash-es": "^4.17.23",
     "vue": "^3.5.31"
   }

@@ -8,7 +8,7 @@ export default defineConfig({
     outDir: 'dist/umd/',
     lib: {
       entry: resolve(__dirname, './index.ts'),
-      name: 'AKUI',
+      name: 'AKAUI',
       fileName: 'index',
       formats: ['umd'],
     },

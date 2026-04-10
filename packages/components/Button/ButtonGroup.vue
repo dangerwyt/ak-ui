@@ -4,7 +4,7 @@
   import type { ButtonGroupProps } from './types';
 
   defineOptions({
-    name: 'AkButtonGroup',
+    name: 'AkaButtonGroup',
   });
 
   const props = defineProps<ButtonGroupProps>();
@@ -20,7 +20,7 @@
 </script>
 
 <template>
-  <div class="ak-button-group">
+  <div class="aka-button-group">
     <slot></slot>
   </div>
 </template>

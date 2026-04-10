@@ -16,7 +16,7 @@ describe('Button.vue', () => {
     ));
 
     // class
-    expect(wrapper.classes()).toContain('ak-button--primary');
+    expect(wrapper.classes()).toContain('aka-button--primary');
 
     // slot
     expect(wrapper.get('button').text()).toBe('button content');
@@ -55,7 +55,7 @@ describe('Button.vue', () => {
         default: 'loading button',
       },
       global: {
-        stubs: ['AkIcon'],
+        stubs: ['AkaIcon'],
       },
     });
 
@@ -85,7 +85,7 @@ describe('Button.vue', () => {
         default: 'icon button',
       },
       global: {
-        stubs: ['AkIcon'],
+        stubs: ['AkaIcon'],
       },
     });
 
@@ -101,7 +101,7 @@ describe('Button.vue', () => {
       const wrapper = mount(Button, {
         props: { type: type as ButtonType },
       });
-      expect(wrapper.classes()).toContain(`ak-button--${type}`);
+      expect(wrapper.classes()).toContain(`aka-button--${type}`);
     });
   });
 
@@ -112,7 +112,7 @@ describe('Button.vue', () => {
       const wrapper = mount(Button, {
         props: { size: size as ButtonSize },
       });
-      expect(wrapper.classes()).toContain(`ak-button--${size}`);
+      expect(wrapper.classes()).toContain(`aka-button--${size}`);
     });
   });
 
@@ -129,7 +129,7 @@ describe('Button.vue', () => {
       const wrapper = mount(Button, {
         props: { [prop]: true },
         global: {
-          stubs: ['AkIcon'],
+          stubs: ['AkaIcon'],
         },
       });
       expect(wrapper.classes()).toContain(className);
@@ -184,7 +184,7 @@ describe('Button.vue', () => {
     const wrapper = mount(Button, {
       props: { loading: true },
       global: {
-        stubs: ['AkIcon'],
+        stubs: ['AkaIcon'],
       },
     });
     const iconElement = wrapper.findComponent(Icon);
@@ -206,7 +206,7 @@ describe('ButtonGroup.vue', () => {
       </ButtonGroup>
     ));
 
-    expect(wrapper.classes()).toContain('ak-button-group');
+    expect(wrapper.classes()).toContain('aka-button-group');
   });
 
   test('button group size', () => {
@@ -220,7 +220,7 @@ describe('ButtonGroup.vue', () => {
       ));
 
       const buttonWrapper = wrapper.findComponent(Button);
-      expect(buttonWrapper.classes()).toContain(`ak-button--${size}`);
+      expect(buttonWrapper.classes()).toContain(`aka-button--${size}`);
     });
   });
 
@@ -235,7 +235,7 @@ describe('ButtonGroup.vue', () => {
       ));
 
       const buttonWrapper = wrapper.findComponent(Button);
-      expect(buttonWrapper.classes()).toContain(`ak-button--${type}`);
+      expect(buttonWrapper.classes()).toContain(`aka-button--${type}`);
     });
   });
 

@@ -1,4 +1,4 @@
-import { AkButton, AkButtonGroup, AkIcon } from '@ak-ui/components';
+import { AkaButton, AkaButtonGroup, AkaIcon } from '@aka-element/components';
 import type { Plugin } from 'vue';
 
-export default [AkButton, AkButtonGroup, AkIcon] as Plugin[];
+export default [AkaButton, AkaButtonGroup, AkaIcon] as Plugin[];

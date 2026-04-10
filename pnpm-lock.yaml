@@ -8,16 +8,16 @@ importers:
 
   .:
     dependencies:
-      '@ak-ui/hooks':
+      '@aka-element/hooks':
         specifier: workspace:*
         version: link:packages/hooks
-      '@ak-ui/theme':
+      '@aka-element/theme':
         specifier: workspace:*
         version: link:packages/theme
-      '@ak-ui/utils':
+      '@aka-element/utils':
         specifier: workspace:*
         version: link:packages/utils
-      ak-ui:
+      aka-element:
         specifier: workspace:*
         version: link:packages/core
       lodash-es:
@@ -135,7 +135,7 @@ importers:
         specifier: ^3.5.31
         version: 3.5.31(typescript@5.9.3)
     devDependencies:
-      '@ak-ui/components':
+      '@aka-element/components':
         specifier: workspace:*
         version: link:../components
       vite-plugin-dts:

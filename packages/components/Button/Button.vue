@@ -2,11 +2,11 @@
   import type { ButtonProps, ButtonInstance, ButtonEmits } from './types';
   import { ref, computed, inject } from 'vue';
   import { throttle } from 'lodash-es';
-  import AkIcon from '../Icon/Icon.vue';
+  import AkaIcon from '../Icon/Icon.vue';
   import { BUTTON_GROUP_CTX_KEY } from './constant';
 
   defineOptions({
-    name: 'AkButton',
+    name: 'AkaButton',
   });
 
   const props = withDefaults(defineProps<ButtonProps>(), {
@@ -50,14 +50,14 @@
 <template>
   <component
     ref="_ref"
-    class="ak-button"
+    class="aka-button"
     :is="tag"
     :autofocus="autofocus"
     :type="tag === 'button' ? nativeType : void 0"
     :disabled="disabled || loading ? true : void 0"
     :class="{
-      [`ak-button--${type}`]: type,
-      [`ak-button--${size}`]: size,
+      [`aka-button--${type}`]: type,
+      [`aka-button--${size}`]: size,
       'is-plain': plain,
       'is-round': round,
       'is-disabled': disabled,
@@ -71,7 +71,7 @@
   >
     <template v-if="loading">
       <slot name="loading">
-        <ak-icon
+        <aka-icon
           class="loading-icon"
           :icon="loadingIcon ?? 'spinner'"
           :style="iconStyle"
@@ -80,7 +80,7 @@
         />
       </slot>
     </template>
-    <ak-icon
+    <aka-icon
       v-if="icon && !loading"
       :icon="icon"
       :style="iconStyle"

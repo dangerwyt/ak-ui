@@ -1,25 +1,25 @@
-.ak-button-group {
-  --ak-button-group-border-color: var(--ak-border-color-lighter);
+.aka-button-group {
+  --aka-button-group-border-color: var(--aka-border-color-lighter);
 }
-.ak-button {
-  --ak-button-font-weight: var(--ak-font-weight-primary);
-  --ak-button-border-color: var(--ak-border-color);
-  --ak-button-bg-color: var(--ak-fill-color-blank);
-  --ak-button-text-color: var(--ak-text-color-regular);
-  --ak-button-disabled-text-color: var(--ak-disabled-text-color);
-  --ak-button-disabled-bg-color: var(--ak-fill-color-blank);
-  --ak-button-disabled-border-color: var(--ak-border-color-light);
-  --ak-button-hover-text-color: var(--ak-color-primary);
-  --ak-button-hover-bg-color: var(--ak-color-primary-light-9);
-  --ak-button-hover-border-color: var(--ak-color-primary-light-7);
-  --ak-button-active-text-color: var(--ak-button-hover-text-color);
-  --ak-button-active-border-color: var(--ak-color-primary);
-  --ak-button-active-bg-color: var(--ak-button-hover-bg-color);
-  --ak-button-outline-color: var(--ak-color-primary-light-5);
-  --ak-button-active-color: var(--ak-text-color-primary);
+.aka-button {
+  --aka-button-font-weight: var(--aka-font-weight-primary);
+  --aka-button-border-color: var(--aka-border-color);
+  --aka-button-bg-color: var(--aka-fill-color-blank);
+  --aka-button-text-color: var(--aka-text-color-regular);
+  --aka-button-disabled-text-color: var(--aka-disabled-text-color);
+  --aka-button-disabled-bg-color: var(--aka-fill-color-blank);
+  --aka-button-disabled-border-color: var(--aka-border-color-light);
+  --aka-button-hover-text-color: var(--aka-color-primary);
+  --aka-button-hover-bg-color: var(--aka-color-primary-light-9);
+  --aka-button-hover-border-color: var(--aka-color-primary-light-7);
+  --aka-button-active-text-color: var(--aka-button-hover-text-color);
+  --aka-button-active-border-color: var(--aka-color-primary);
+  --aka-button-active-bg-color: var(--aka-button-hover-bg-color);
+  --aka-button-outline-color: var(--aka-color-primary-light-5);
+  --aka-button-active-color: var(--aka-text-color-primary);
 }
 
-.ak-button {
+.aka-button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -27,46 +27,46 @@
   height: 32px;
   white-space: nowrap;
   cursor: pointer;
-  color: var(--ak-button-text-color);
+  color: var(--aka-button-text-color);
   text-align: center;
   box-sizing: border-box;
   outline: none;
   transition: 0.1s;
-  font-weight: var(--ak-button-font-weight);
+  font-weight: var(--aka-button-font-weight);
   user-select: none;
   vertical-align: middle;
   -webkit-appearance: none;
-  background-color: var(--ak-button-bg-color);
-  border: var(--ak-border);
-  border-color: var(--ak-button-border-color);
+  background-color: var(--aka-button-bg-color);
+  border: var(--aka-border);
+  border-color: var(--aka-button-border-color);
   padding: 8px 15px;
-  font-size: var(--ak-font-size-base);
-  border-radius: var(--ak-border-radius-base);
+  font-size: var(--aka-font-size-base);
+  border-radius: var(--aka-border-radius-base);
   & + & {
     margin-left: 12px;
   }
   &:hover,
   &:focus {
-    color: var(--ak-button-hover-text-color);
-    border-color: var(--ak-button-hover-border-color);
-    background-color: var(--ak-button-hover-bg-color);
+    color: var(--aka-button-hover-text-color);
+    border-color: var(--aka-button-hover-border-color);
+    background-color: var(--aka-button-hover-bg-color);
     outline: none;
   }
   &:active {
-    color: var(--ak-button-active-text-color);
-    border-color: var(--ak-button-active-border-color);
-    background-color: var(--ak-button-active-bg-color);
+    color: var(--aka-button-active-text-color);
+    border-color: var(--aka-button-active-border-color);
+    background-color: var(--aka-button-active-bg-color);
     outline: none;
   }
   /*plain*/
   &.is-plain {
-    --ak-button-hover-text-color: var(--ak-color-primary);
-    --ak-button-hover-bg-color: var(--ak-fill-color-blank);
-    --ak-button-hover-border-color: var(--ak-color-primary);
+    --aka-button-hover-text-color: var(--aka-color-primary);
+    --aka-button-hover-bg-color: var(--aka-fill-color-blank);
+    --aka-button-hover-border-color: var(--aka-color-primary);
   }
   /*round*/
   &.is-round {
-    border-radius: var(--ak-border-radius-round);
+    border-radius: var(--aka-border-radius-round);
   }
   /*circle*/
   &.is-circle {
@@ -81,11 +81,11 @@
   &[disabled],
   &[disabled]:hover,
   &[disabled]:focus {
-    color: var(--ak-button-disabled-text-color);
+    color: var(--aka-button-disabled-text-color);
     cursor: not-allowed;
     background-image: none;
-    background-color: var(--ak-button-disabled-bg-color);
-    border-color: var(--ak-button-disabled-border-color);
+    background-color: var(--aka-button-disabled-bg-color);
+    border-color: var(--aka-button-disabled-border-color);
   }
   [class*='ak-icon'] {
     width: 1em;
@@ -93,53 +93,53 @@
   }
 }
 @each $val in primary, success, warning, info, danger {
-  .ak-button--$(val) {
-    --ak-button-text-color: var(--ak-color-white);
-    --ak-button-bg-color: var(--ak-color-$(val));
-    --ak-button-border-color: var(--ak-color-$(val));
-    --ak-button-outline-color: var(--ak-color-$(val)-light-5);
-    --ak-button-active-color: var(--ak-color-$(val)-dark-2);
-    --ak-button-hover-text-color: var(--ak-color-white);
-    --ak-button-hover-bg-color: var(--ak-color-$(val)-light-3);
-    --ak-button-hover-border-color: var(--ak-color-$(val)-light-3);
-    --ak-button-active-bg-color: var(--ak-color-$(val)-dark-2);
-    --ak-button-active-border-color: var(--ak-color-$(val)-dark-2);
-    --ak-button-disabled-text-color: var(--ak-color-white);
-    --ak-button-disabled-bg-color: var(--ak-color-$(val)-light-5);
-    --ak-button-disabled-border-color: var(--ak-color-$(val)-light-5);
+  .aka-button--$(val) {
+    --aka-button-text-color: var(--aka-color-white);
+    --aka-button-bg-color: var(--aka-color-$(val));
+    --aka-button-border-color: var(--aka-color-$(val));
+    --aka-button-outline-color: var(--aka-color-$(val)-light-5);
+    --aka-button-active-color: var(--aka-color-$(val)-dark-2);
+    --aka-button-hover-text-color: var(--aka-color-white);
+    --aka-button-hover-bg-color: var(--aka-color-$(val)-light-3);
+    --aka-button-hover-border-color: var(--aka-color-$(val)-light-3);
+    --aka-button-active-bg-color: var(--aka-color-$(val)-dark-2);
+    --aka-button-active-border-color: var(--aka-color-$(val)-dark-2);
+    --aka-button-disabled-text-color: var(--aka-color-white);
+    --aka-button-disabled-bg-color: var(--aka-color-$(val)-light-5);
+    --aka-button-disabled-border-color: var(--aka-color-$(val)-light-5);
   }
-  .ak-button--$(val).is-plain {
-    --ak-button-text-color: var(--ak-color-$(val));
-    --ak-button-bg-color: var(--ak-color-$(val)-light-9);
-    --ak-button-border-color: var(--ak-color-$(val)-light-5);
-    --ak-button-hover-text-color: var(--ak-color-white);
-    --ak-button-hover-bg-color: var(--ak-color-$(val));
-    --ak-button-hover-border-color: var(--ak-color-$(val));
-    --ak-button-active-text-color: var(--ak-color-white);
+  .aka-button--$(val).is-plain {
+    --aka-button-text-color: var(--aka-color-$(val));
+    --aka-button-bg-color: var(--aka-color-$(val)-light-9);
+    --aka-button-border-color: var(--aka-color-$(val)-light-5);
+    --aka-button-hover-text-color: var(--aka-color-white);
+    --aka-button-hover-bg-color: var(--aka-color-$(val));
+    --aka-button-hover-border-color: var(--aka-color-$(val));
+    --aka-button-active-text-color: var(--aka-color-white);
 
-    --ak-button-disabled-text-color: var(--ak-color-$(val)-light-5);
-    --ak-button-disabled-bg-color: var(--ak-color-$(val)-light-9);
-    --ak-button-disabled-border-color: var(--ak-color-$(val)-light-8);
+    --aka-button-disabled-text-color: var(--aka-color-$(val)-light-5);
+    --aka-button-disabled-bg-color: var(--aka-color-$(val)-light-9);
+    --aka-button-disabled-border-color: var(--aka-color-$(val)-light-8);
   }
 }
-.ak-button--large {
-  --ak-button-size: 40px;
-  height: var(--ak-button-size);
+.aka-button--large {
+  --aka-button-size: 40px;
+  height: var(--aka-button-size);
   padding: 12px 19px;
-  font-size: var(--ak-font-size-base);
-  border-radius: var(--ak-border-radius-base);
+  font-size: var(--aka-font-size-base);
+  border-radius: var(--aka-border-radius-base);
   /*circle*/
   &.is-circle {
     border-radius: 50%;
     padding: 12px;
   }
 }
-.ak-button--small {
-  --ak-button-size: 24px;
-  height: var(--ak-button-size);
+.aka-button--small {
+  --aka-button-size: 24px;
+  height: var(--aka-button-size);
   padding: 5px 11px;
   font-size: 12px;
-  border-radius: calc(var(--ak-border-radius-base) - 1px);
+  border-radius: calc(var(--aka-border-radius-base) - 1px);
   /*circle*/
   &.is-circle {
     border-radius: 50%;
@@ -151,44 +151,44 @@
   }
 }
 
-.ak-button-group {
+.aka-button-group {
   display: inline-block;
   vertical-align: middle;
 
   &::after {
     clear: both;
   }
-  & > :deep(.ak-button) {
+  & > :deep(.aka-button) {
     float: left;
     position: relative;
     margin-left: 0;
     &:first-child {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
-      border-right-color: var(--ak-button-group-border-color);
+      border-right-color: var(--aka-button-group-border-color);
     }
     &:last-child {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
-      border-left-color: var(--ak-button-group-border-color);
+      border-left-color: var(--aka-button-group-border-color);
     }
     &:not(:first-child):not(:last-child) {
       border-radius: 0;
 
-      border-left-color: var(--ak-button-group-border-color);
-      border-right-color: var(--ak-button-group-border-color);
+      border-left-color: var(--aka-button-group-border-color);
+      border-right-color: var(--aka-button-group-border-color);
     }
     &:not(:last-child) {
       margin-right: -1px;
     }
     &:first-child:last-child {
-      border-top-right-radius: var(--ak-border-radius-base);
-      border-bottom-right-radius: var(--ak-border-radius-base);
-      border-top-left-radius: var(--ak-border-radius-base);
-      border-bottom-left-radius: var(--ak-border-radius-base);
+      border-top-right-radius: var(--aka-border-radius-base);
+      border-bottom-right-radius: var(--aka-border-radius-base);
+      border-top-left-radius: var(--aka-border-radius-base);
+      border-bottom-left-radius: var(--aka-border-radius-base);
 
       &.is-round {
-        border-radius: var(--ak-border-radius-round);
+        border-radius: var(--aka-border-radius-round);
       }
 
       &.is-circle {

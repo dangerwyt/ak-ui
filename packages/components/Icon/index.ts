@@ -1,5 +1,5 @@
 import Icon from './Icon.vue';
-import { withInstall } from '@ak-ui/utils';
+import { withInstall } from '@aka-element/utils';
 
-export const AkIcon = withInstall(Icon);
+export const AkaIcon = withInstall(Icon);
 export * from './types';
