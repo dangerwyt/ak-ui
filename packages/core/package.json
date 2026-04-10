@@ -44,7 +44,7 @@
     "async-validator": "^4.2.5"
   },
   "devDependencies": {
-    "vite-plugin-dts": "^3.9.1",
+    "vite-plugin-dts": "^4.3.0",
     "@aka-element/components": "workspace:*"
   },
   "peerDependencies": {

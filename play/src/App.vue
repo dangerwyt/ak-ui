@@ -1,18 +1,20 @@
 <script setup lang="ts"></script>
 
 <template>
-  <ak-button type="primary" size="large" icon="edit" circle plain></ak-button>
+  <aka-button type="primary" size="large" icon="edit" circle plain></aka-button>
 
   <div>
-    <ak-icon type="danger" icon="edit"></ak-icon>
+    <aka-icon type="danger" icon="edit" />
   </div>
 
   <div>
-    <ak-button-group>
-      <ak-button type="primary" size="large" icon="edit" round>编辑</ak-button>
-      <ak-button type="primary" size="large" icon="search" round>
+    <aka-button-group>
+      <aka-button type="primary" size="large" icon="edit" round>
+        编辑
+      </aka-button>
+      <aka-button type="primary" size="large" icon="search" round>
         搜索
-      </ak-button>
-    </ak-button-group>
+      </aka-button>
+    </aka-button-group>
   </div>
 </template>

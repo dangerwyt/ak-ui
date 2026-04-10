@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-import AkUI from 'ak-ui';
-import 'ak-ui/dist/index.css';
+import AkaElement from 'aka-element';
+import 'aka-element/dist/index.css';
 
-createApp(App).use(AkUI).mount('#app');
+createApp(App).use(AkaElement).mount('#app');

@@ -8,7 +8,7 @@ export default defineConfig({
     outDir: 'dist/umd/',
     lib: {
       entry: resolve(__dirname, './index.ts'),
-      name: 'AKAUI',
+      name: 'AKAElement',
       fileName: 'index',
       formats: ['umd'],
     },
@@ -20,10 +20,10 @@ export default defineConfig({
           vue: 'Vue',
         },
         assetFileNames: (assetInfo) => {
-          if (assetInfo.name === 'style.css') {
+          if (assetInfo.names[0] === 'style.css') {
             return 'index.css';
           }
-          return assetInfo.name as string;
+          return assetInfo.names[0] as string;
         },
       },
     },
