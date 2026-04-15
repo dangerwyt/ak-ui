@@ -1,14 +1,14 @@
 import type { Meta, StoryObj, ArgTypes } from '@storybook/vue3-vite';
 import { fn, within, expect, userEvent } from 'storybook/test';
 
-import { AkButton, AkButtonGroup } from 'ak-ui';
+import { AkaButton, AkaButtonGroup } from 'aka-element';
 
-type Story = StoryObj<typeof AkButton> & { argTypes: ArgTypes };
+type Story = StoryObj<typeof AkaButton> & { argTypes: ArgTypes };
 
-const meta: Meta<typeof AkButton> = {
+const meta: Meta<typeof AkaButton> = {
   title: 'Example/Button',
-  component: AkButton,
-  subcomponents: { ButtonGroup: AkButtonGroup },
+  component: AkaButton,
+  subcomponents: { ButtonGroup: AkaButtonGroup },
   tags: ['autodocs'],
   argTypes: {
     type: {
@@ -69,12 +69,12 @@ export const Default: Story & { args: { content: string } } = {
     content: 'Button',
   },
   render: (args) => ({
-    components: { AkButton },
+    components: { AkaButton },
     setup() {
       return { args };
     },
     template: container(
-      `<ak-button v-bind="args">{{args.content}}</ak-button>`
+      `<aka-button v-bind="args">{{args.content}}</aka-button>`
     ),
   }),
 
@@ -115,15 +115,15 @@ export const Group: Story & { args: { content1: string; content2: string } } = {
     content2: 'Button2',
   },
   render: (args) => ({
-    components: { AkButton, AkButtonGroup },
+    components: { AkaButton, AkaButtonGroup },
     setup() {
       return { args };
     },
     template: container(`
-       <ak-button-group :type="args.groupType" :size="args.groupSize" :disabled="args.groupDisabled">
-         <ak-button v-bind="args">{{args.content1}}</ak-button>
-         <ak-button v-bind="args">{{args.content2}}</ak-button>
-       </ak-button-group>
+       <aka-button-group :type="args.groupType" :size="args.groupSize" :disabled="args.groupDisabled">
+         <aka-button v-bind="args">{{args.content1}}</aka-button>
+         <aka-button v-bind="args">{{args.content2}}</aka-button>
+       </aka-button-group>
     `),
   }),
   play: async ({ canvasElement, args, step }) => {

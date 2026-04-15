@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "play": "pnpm --filter play dev",
-    "story": "pnpm --filter play storybook",
+    "play": "pnpm run build && pnpm --filter play dev",
+    "story": "pnpm run build && pnpm --filter play storybook",
     "docs:dev": "pnpm --filter docs dev",
     "docs:build": "pnpm --filter docs build",
     "docs:preview": "pnpm --filter docs preview",
