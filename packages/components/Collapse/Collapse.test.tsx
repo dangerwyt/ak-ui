@@ -164,12 +164,12 @@ describe('Collapse.vue', () => {
     );
     expect(warn.mock.calls).toMatchInlineSnapshot(
       `
+      [
         [
-          [
-            [AkaUIError: [AkaCollapse] accordion mode should only have one active item],
-          ],
-        ]
-      `
+          [AkaError: [AkaCollapse]: accordion mode only support one active name at a time],
+        ],
+      ]
+    `
     );
   });
 });
