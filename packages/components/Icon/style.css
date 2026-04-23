@@ -1,5 +1,5 @@
 .aka-icon {
-  --ak-icon-color: inherit;
+  --aka-icon-color: inherit;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -11,6 +11,6 @@
 
 @each $val in primary, info, success, warning, danger {
   .aka-icon--$(val) {
-    --ak-icon-color: var(--aka-color-$(val));
+    --aka-icon-color: var(--aka-color-$(val));
   }
 }

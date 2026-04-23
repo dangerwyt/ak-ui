@@ -1,12 +1,13 @@
 <script setup lang="ts">
-  import { inject, computed } from 'vue';
+  import { inject, computed, defineAsyncComponent } from 'vue';
   import type { CollapseItemProps } from './types';
   import { COLLAPSE_CTX_KEY } from './constant';
-  import AkaIcon from '../Icon/Icon.vue';
+  // import AkaIcon from '../Icon/Icon.vue';
   import transitionEvents from './transitionEvent';
   defineOptions({
     name: 'AkaCollapseItem',
   });
+  const AkaIcon = defineAsyncComponent(() => import('../Icon/Icon.vue'));
   const props = defineProps<CollapseItemProps>();
   const ctx = inject(COLLAPSE_CTX_KEY);
   const isActive = computed(() => ctx?.activeNames.value?.includes(props.name));

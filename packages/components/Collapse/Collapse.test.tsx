@@ -118,7 +118,7 @@ describe('Collapse.vue', () => {
       ),
       {
         global: {
-          stubs: ['ErIcon'],
+          stubs: ['AkaIcon'],
         },
         attachTo: document.body,
       }
@@ -158,7 +158,7 @@ describe('Collapse.vue', () => {
       ),
       {
         global: {
-          stubs: ['ErIcon'],
+          stubs: ['AkaIcon'],
         },
       }
     );
@@ -166,7 +166,7 @@ describe('Collapse.vue', () => {
       `
         [
           [
-            [ErUIError: [ErCollapse] accordion mode should only have one active item],
+            [AkaUIError: [AkaCollapse] accordion mode should only have one active item],
           ],
         ]
       `

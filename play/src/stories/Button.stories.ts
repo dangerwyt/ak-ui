@@ -2,6 +2,7 @@ import type { Meta, StoryObj, ArgTypes } from '@storybook/vue3-vite';
 import { fn, within, expect, userEvent } from 'storybook/test';
 
 import { AkaButton, AkaButtonGroup } from 'aka-element';
+import 'aka-element/dist/theme/Button.css';
 
 type Story = StoryObj<typeof AkaButton> & { argTypes: ArgTypes };
 

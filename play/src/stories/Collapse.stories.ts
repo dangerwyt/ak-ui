@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/vue3-vite';
 import { AkaCollapse, AkaCollapseItem } from 'aka-element';
 
+import 'aka-element/dist/theme/Collapse.css';
+
 type Story = StoryObj<typeof AkaCollapse>;
 
 const meta: Meta<typeof AkaCollapse> = {
