@@ -4,6 +4,7 @@ import {
   AkaIcon,
   AkaCollapse,
   AkaCollapseItem,
+  AkaAlert,
 } from '@aka-element/components';
 import type { Plugin } from 'vue';
 
@@ -13,4 +14,5 @@ export default [
   AkaIcon,
   AkaCollapse,
   AkaCollapseItem,
+  AkaAlert,
 ] as Plugin[];
