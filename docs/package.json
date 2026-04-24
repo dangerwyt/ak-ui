@@ -2,10 +2,16 @@
   "name": "docs",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
     "preview": "vitepress preview"
+  },
+  "dependencies": {
+    "@vitepress-demo-preview/component": "^2.6.2",
+    "@vitepress-demo-preview/plugin": "^1.4.1",
+    "vitepress": "1.6.2"
   }
 }

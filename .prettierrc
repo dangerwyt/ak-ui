@@ -15,5 +15,13 @@
   "insertPragma": false,
   "requirePragma": false,
   "htmlWhitespaceSensitivity": "ignore",
-  "jsxBracketSameLine": false
+  "jsxBracketSameLine": false,
+  "overrides": [
+    {
+      "files": "*.md",
+      "options": {
+        "proseWrap": "never"
+      }
+    }
+  ]
 }

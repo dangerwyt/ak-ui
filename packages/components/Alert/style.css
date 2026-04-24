@@ -37,6 +37,7 @@
   &.is-big {
     font-size: var(--aka-alert-icon-large-size);
     width: var(--aka-alert-icon-large-size);
+    margin-right: 12px;
   }
 }
 
