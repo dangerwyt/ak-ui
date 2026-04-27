@@ -17,8 +17,7 @@ const isTest = process.env.NODE_ENV === 'test';
 
 function moveStyles() {
   readFile('./dist/umd/index.css.gz', (err) => {
-    if (err) return;
-    delay(moveStyles, TRY_MOVE_STYLES_DELAY);
+    if (err) return delay(moveStyles, TRY_MOVE_STYLES_DELAY);
     defer(() => shell.cp('./dist/umd/index.css', './dist/index.css'));
   });
 }

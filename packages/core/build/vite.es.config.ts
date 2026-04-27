@@ -25,8 +25,7 @@ function getDirectoriesSync(basePath: string) {
 
 function moveStyles() {
   readdir('./dist/es/theme', (err) => {
-    if (err) return;
-    delay(moveStyles, TRY_MOVE_STYLES_DELAY);
+    if (err) return delay(moveStyles, TRY_MOVE_STYLES_DELAY);
     defer(() => shell.mv('./dist/es/theme', './dist'));
   });
 }
