@@ -1,15 +1,14 @@
 <script setup lang="ts">
   import type { ButtonProps, ButtonInstance, ButtonEmits } from './types';
-  import { ref, computed, inject, defineAsyncComponent } from 'vue';
+  import { ref, computed, inject } from 'vue';
   import { throttle } from 'lodash-es';
-  // import AkaIcon from '../Icon/Icon.vue';
+  import AkaIcon from '../Icon/Icon.vue';
   import { BUTTON_GROUP_CTX_KEY } from './constant';
 
   defineOptions({
     name: 'AkaButton',
   });
 
-  const AkaIcon = defineAsyncComponent(() => import('../Icon/Icon.vue'));
   const props = withDefaults(defineProps<ButtonProps>(), {
     tag: 'button',
     nativeType: 'button',
