@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@aka-element/components':
+        specifier: workspace:*
+        version: link:packages/components
       '@aka-element/hooks':
         specifier: workspace:*
         version: link:packages/hooks

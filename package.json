@@ -45,6 +45,7 @@
     "vue-tsc": "^1.8.27"
   },
   "dependencies": {
+    "@aka-element/components": "workspace:*",
     "@aka-element/hooks": "workspace:*",
     "@aka-element/theme": "workspace:*",
     "@aka-element/utils": "workspace:*",
