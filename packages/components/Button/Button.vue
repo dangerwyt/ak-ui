@@ -12,7 +12,6 @@
   const props = withDefaults(defineProps<ButtonProps>(), {
     tag: 'button',
     nativeType: 'button',
-    size: 'default',
     useThrottle: true,
     throttleDuration: 500,
   });
@@ -29,8 +28,9 @@
     marginRight: slots.default ? '6px' : '0px',
   }));
 
-  const size = computed(() => ctx?.size ?? props?.size ?? '');
-  const type = computed(() => ctx?.type ?? props?.type ?? '');
+  const size = computed(() => ctx?.size ?? props.size ?? '');
+  const type = computed(() => ctx?.type ?? props.type ?? '');
+
   const disabled = computed(() => ctx?.disabled || props?.disabled || false);
 
   const handleBtnClick = (e: MouseEvent) => {

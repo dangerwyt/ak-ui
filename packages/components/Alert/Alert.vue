@@ -2,7 +2,7 @@
   import { ref, computed, useSlots } from 'vue';
   import type { AlertProps, AlertEmits } from './types';
   import AkaIcon from '../Icon/Icon.vue';
-  import { typeIconMap } from '@aka-element/hooks';
+  import { typeIconMap } from '@aka-element/utils';
 
   defineOptions({
     name: 'AkaAlert',

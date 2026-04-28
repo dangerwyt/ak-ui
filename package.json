@@ -9,7 +9,9 @@
     "docs:dev": "pnpm --filter docs dev",
     "docs:build": "pnpm --filter docs build",
     "docs:preview": "pnpm --filter docs preview",
-    "test": "cross-env NODE_ENV=test pnpm --filter @aka-element/components test",
+    "test": "run-s test-utils test-comp",
+    "test-utils": "cross-env NODE_ENV=test pnpm --filter @aka-element/utils test",
+    "test-comp": "cross-env NODE_ENV=test pnpm --filter @aka-element/components test",
     "build": "cross-env NODE_ENV=production pnpm --filter aka-element build",
     "build:dev": "cross-env NODE_ENV=development pnpm --filter aka-element build:watch"
   },
@@ -42,7 +44,10 @@
     "vite": "5.4.21",
     "vite-plugin-dts": "^3.9.1",
     "vitest": "^1.6.1",
-    "vue-tsc": "^1.8.27"
+    "vue-tsc": "^1.8.27",
+    "@vitest/coverage-v8": "^1.6.1",
+    "@vue/test-utils": "^2.4.6",
+    "jsdom": "^24.1.3"
   },
   "dependencies": {
     "@aka-element/components": "workspace:*",
