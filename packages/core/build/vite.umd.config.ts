@@ -6,7 +6,7 @@ import { compression } from 'vite-plugin-compression2';
 import shell from 'shelljs';
 import { visualizer } from 'rollup-plugin-visualizer';
 import vue from '@vitejs/plugin-vue';
-import hook from './hooksPlugin';
+import { hooksPlugin as hook } from '@aka-element/vite-plugins';
 import terser from '@rollup/plugin-terser';
 
 const TRY_MOVE_STYLES_DELAY = 800 as const;

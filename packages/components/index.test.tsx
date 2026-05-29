@@ -9,6 +9,7 @@ import {
   AkaAlert,
   AkaCollapse,
   AkaCollapseItem,
+  AkaTooltip,
 } from './index';
 
 const components = [
@@ -18,6 +19,7 @@ const components = [
   AkaAlert,
   AkaCollapse,
   AkaCollapseItem,
+  AkaTooltip,
 ] as Plugin[];
 
 describe('components/index.ts', () => {

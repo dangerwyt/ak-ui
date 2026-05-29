@@ -3,17 +3,17 @@ import shell from 'shelljs';
 
 export default function hooksPlugin({
   rmFiles = [],
-  beforeBuild,
   afterBuild,
+  beforeBuild,
 }: {
-  rmFiles?: string[];
   beforeBuild?: Function;
   afterBuild?: Function;
+  rmFiles?: string[];
 }) {
   return {
-    name: 'hooks-plugin',
+    name: 'custom-hooks-plugin',
     buildStart() {
-      each(rmFiles, (file) => shell.rm('-rf', file));
+      each(rmFiles, (fName) => shell.rm('-rf', fName));
       isFunction(beforeBuild) && beforeBuild();
     },
     buildEnd(err?: Error) {

@@ -12,7 +12,9 @@
     "test": "run-s test-utils test-comp",
     "test-utils": "cross-env NODE_ENV=test pnpm --filter @aka-element/utils test",
     "test-comp": "cross-env NODE_ENV=test pnpm --filter @aka-element/components test",
-    "build": "cross-env NODE_ENV=production pnpm --filter aka-element build",
+    "build": "run-s build-hooks build-comp ",
+    "build-comp": "cross-env NODE_ENV=production pnpm --filter aka-element build",
+    "build-hooks": "cross-env NODE_ENV=production pnpm --filter @aka-element/hooks build",
     "build:dev": "cross-env NODE_ENV=development pnpm --filter aka-element build:watch"
   },
   "keywords": [],
@@ -54,6 +56,7 @@
     "@aka-element/hooks": "workspace:*",
     "@aka-element/theme": "workspace:*",
     "@aka-element/utils": "workspace:*",
+    "@aka-element/vite-plugins": "workspace:*",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/vue-fontawesome": "^3.0.8",
