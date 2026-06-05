@@ -134,6 +134,18 @@ describe('Tooltip.vue', () => {
     expect(wrapper.find('.aka-tooltip__popper').exists()).toBeFalsy();
   });
 
+  // 效果的测试
+  test('tooltip effect', async () => {
+    // ... 省略其他设置
+    const wrapper = mount(Tooltip, {
+      props: { effect: 'dark', content: 'test', trigger: 'click' },
+    });
+    // 测试效果
+    wrapper.find('.aka-tooltip__trigger').trigger('click');
+    await vi.runAllTimers();
+    expect(wrapper.find('.aka-tooltip__popper').classes()).toContain('is-dark');
+  });
+
   // 禁用状态的测试
   test('disabled tooltip', async () => {
     // ... 省略其他设置
