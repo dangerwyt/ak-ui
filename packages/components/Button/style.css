@@ -87,6 +87,21 @@
     background-color: var(--aka-button-disabled-bg-color);
     border-color: var(--aka-button-disabled-border-color);
   }
+  /*text button*/
+  &.is-text {
+    background-color: transparent;
+    border-color: transparent;
+    color: var(--aka-button-bg-color);
+    &.is-disabled {
+      background-color: transparent;
+      border-color: transparent;
+      color: var(--aka-button-disabled-bg-color);
+    }
+    &:not(.is-disabled):hover,
+    &:not(.is-disabled).is-has-bg {
+      background-color: var(--aka-fill-color-light);
+    }
+  }
   [class*='aka-icon'] {
     width: 1em;
     height: 1em;

@@ -14,6 +14,7 @@
     nativeType: 'button',
     useThrottle: true,
     throttleDuration: 500,
+    text: false,
   });
 
   const emit = defineEmits<ButtonEmits>();
@@ -32,6 +33,9 @@
   const type = computed(() => ctx?.type ?? props.type ?? '');
 
   const disabled = computed(() => ctx?.disabled || props?.disabled || false);
+
+  const text = computed(() => props?.text ?? false);
+  const hasBg = computed(() => props?.bg ?? false);
 
   const handleBtnClick = (e: MouseEvent) => {
     emit('click', e);
@@ -66,6 +70,8 @@
       'is-disabled': disabled,
       'is-circle': circle,
       'is-loading': loading,
+      'is-text': text,
+      'is-has-bg': hasBg,
     }"
     @click="
       (e: MouseEvent) =>

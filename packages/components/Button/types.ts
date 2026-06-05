@@ -19,6 +19,8 @@ export interface ButtonProps {
   autofocus?: boolean;
   useThrottle?: boolean;
   throttleDuration?: number;
+  text?: boolean;
+  bg?: boolean;
 }
 
 export interface ButtonGroupProps {
