@@ -12,10 +12,12 @@
     "test": "run-s test-utils test-comp",
     "test-utils": "cross-env NODE_ENV=test pnpm --filter @aka-element/utils test",
     "test-comp": "cross-env NODE_ENV=test pnpm --filter @aka-element/components test",
-    "build": "run-s build-hooks build-comp ",
-    "build-comp": "cross-env NODE_ENV=production pnpm --filter aka-element build",
+    "build": "run-s build-hooks build-components",
+    "build:dev": "run-s build-hooks:dev build-components:dev",
+    "build-components": "cross-env NODE_ENV=production pnpm --filter aka-element build",
+    "build-components:dev": "cross-env NODE_ENV=development pnpm --filter aka-element build:watch",
     "build-hooks": "cross-env NODE_ENV=production pnpm --filter @aka-element/hooks build",
-    "build:dev": "cross-env NODE_ENV=development pnpm --filter aka-element build:watch"
+    "build-hooks:dev": "cross-env NODE_ENV=development pnpm --filter @aka-element/hooks build"
   },
   "keywords": [],
   "author": "",

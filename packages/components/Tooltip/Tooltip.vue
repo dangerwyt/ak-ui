@@ -29,6 +29,7 @@
 
   const props = withDefaults(defineProps<_TooltipProps>(), {
     trigger: 'hover',
+    effect: 'dark',
     placement: 'bottom',
     transition: 'fade',
     showTimeout: 0,
@@ -225,6 +226,9 @@
         ref="popperNode"
         v-on="dropdownEvents"
         v-if="visible"
+        :class="{
+          [`is-${effect}`]: effect,
+        }"
       >
         <slot name="content">
           {{ content }}
@@ -234,3 +238,7 @@
     </transition>
   </div>
 </template>
+
+<style scoped>
+  @import './style.css';
+</style>

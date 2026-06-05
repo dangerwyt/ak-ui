@@ -3,6 +3,7 @@ import type { Placement, Options } from '@popperjs/core';
 export interface TooltipProps {
   content?: string;
   trigger?: 'hover' | 'click' | 'contextmenu';
+  effect?: 'dark' | 'light';
   placement?: Placement;
   manual?: boolean;
   disabled?: boolean;
