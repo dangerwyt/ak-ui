@@ -1,43 +1,47 @@
 <template>
-  <p>Basic text button</p>
   <div class="demo-group">
-    <aka-button v-for="item in buttons" :key="item.type" :type="item.type" text>
+    <aka-button v-for="item in buttons" :key="item.type" :type="item.type">
       {{ item.text }}
     </aka-button>
   </div>
-  <p>Background color always on</p>
   <div class="demo-group">
     <aka-button
       v-for="item in buttons"
       :key="item.type"
       :type="item.type"
-      text
-      bg
+      plain
     >
       {{ item.text }}
     </aka-button>
-    <p>Disabled text button</p>
-    <div class="demo-group">
-      <aka-button
-        v-for="item in buttons"
-        :key="item.type"
-        :type="item.type"
-        text
-        disabled
-      >
-        {{ item.text }}
-      </aka-button>
-    </div>
+  </div>
+  <div class="demo-group">
+    <aka-button
+      v-for="item in buttons"
+      :key="item.type"
+      :type="item.type"
+      round
+    >
+      {{ item.text }}
+    </aka-button>
+  </div>
+  <div class="demo-group">
+    <aka-button
+      v-for="item in buttons"
+      :key="item.type"
+      :type="item.type"
+      :icon="item.icon"
+      circle
+    ></aka-button>
   </div>
 </template>
 
 <script setup lang="ts">
   const buttons = [
-    { type: 'primary', text: 'primary' },
-    { type: 'success', text: 'success' },
-    { type: 'info', text: 'info' },
-    { type: 'warning', text: 'warning' },
-    { type: 'danger', text: 'danger' },
+    { type: 'primary', text: 'primary', icon: 'edit' },
+    { type: 'success', text: 'success', icon: 'check' },
+    { type: 'info', text: 'info', icon: 'info' },
+    { type: 'warning', text: 'warning', icon: 'warning' },
+    { type: 'danger', text: 'danger', icon: 'trash' },
   ];
 </script>
 
