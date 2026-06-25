@@ -72,11 +72,8 @@
         </div>
       </div>
     </template>
-    <template v-if="$slots.default" #default>
-      <slot name="default"></slot>
-    </template>
 
-    <template v-if="$slots.reference" #reference>
+    <template v-if="$slots.reference">
       <slot name="reference"></slot>
     </template>
   </aka-tooltip>

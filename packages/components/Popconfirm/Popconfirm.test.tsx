@@ -6,6 +6,31 @@ import { AkaPopconfirm } from '.';
 import type { PopconfirmProps } from './types';
 import Popconfirm from './Popconfirm.vue';
 
+describe('Popconfirm/index.ts', () => {
+  // 测试 withInstall 是否被正确应用
+  it('should be exported with withInstall', () => {
+    expect(AkaPopconfirm.install).toBeDefined();
+  });
+  // 测试 Popconfirm 组件是否被正确导出
+  it('should be exported Popconfirm component', () => {
+    expect(AkaPopconfirm).toBe(Popconfirm);
+  });
+
+  // 可选：测试 withInstall 是否增强了 Popconfirm 组件的功能
+  test('should enhance Popconfirm component', () => {
+    const enhancedPopconfirm = withInstall(Popconfirm);
+    expect(enhancedPopconfirm).toBe(AkaPopconfirm);
+    // 这里可以添加更多测试，确保 withInstall 增强了组件的特定功能
+  });
+
+  // 可选：如果你的 withInstall 函数有特定的行为或属性，确保它们被正确应用
+  test('should apply specific enhancements', () => {
+    const enhancedPopconfirm = withInstall(Popconfirm);
+    // 例如，如果你的 withInstall 增加了一个特定的方法或属性
+    expect(enhancedPopconfirm).toHaveProperty('install');
+  });
+});
+
 // 测试 Popconfirm 组件的 props
 describe('Popconfirm.vue', () => {
   const props = {

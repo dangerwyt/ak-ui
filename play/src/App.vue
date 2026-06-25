@@ -15,6 +15,8 @@
     @confirm="handleConfirm"
     @cancel="handleCancel"
   >
-    <aka-button type="primary" size="small">test</aka-button>
+    <template #reference>
+      <aka-button type="primary" size="small">reference</aka-button>
+    </template>
   </aka-popconfirm>
 </template>
