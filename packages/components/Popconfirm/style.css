@@ -1,0 +1,13 @@
+.aka-popconfirm {
+  .aka-popconfirm__main {
+    display: flex;
+    align-items: center;
+    i {
+      margin-right: 5px;
+    }
+  }
+  .aka-popconfirm__action {
+    text-align: right;
+    margin-top: 8px;
+  }
+}
