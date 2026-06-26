@@ -6,6 +6,9 @@ import { AkaPopconfirm } from '.';
 import type { PopconfirmProps } from './types';
 import Popconfirm from './Popconfirm.vue';
 
+const onConfirm = vi.fn();
+const onCancel = vi.fn();
+
 describe('Popconfirm/index.ts', () => {
   // 测试 withInstall 是否被正确应用
   it('should be exported with withInstall', () => {
@@ -65,10 +68,53 @@ describe('Popconfirm.vue', () => {
     const wrapper = mount(Popconfirm, {
       props,
       slots: {
-        default: slotContent,
+        reference: slotContent,
       },
     });
 
     expect(wrapper.text()).toContain(slotContent);
+  });
+
+  test('popconfirm emits', async () => {
+    const wrapper = mount(() => (
+      <div>
+        <div id="outside"></div>
+        <Popconfirm
+          title="Test title"
+          hideIcon={true}
+          onConfirm={onConfirm}
+          onCancel={onCancel}
+          v-slots={{
+            reference: () => <button id="trigger">trigger</button>,
+          }}
+        ></Popconfirm>
+      </div>
+    ));
+    const triggerArea = wrapper.find('#trigger');
+    expect(triggerArea.exists()).toBeTruthy();
+    triggerArea.trigger('click');
+    await vi.runAllTimers();
+
+    // 测试弹出层是否出现
+    expect(wrapper.find('.aka-popconfirm').exists()).toBeTruthy();
+    const confirmButton = wrapper.find('.aka-popconfirm__confirm');
+    expect(confirmButton.exists()).toBeTruthy();
+
+    confirmButton.trigger('click');
+    await vi.runAllTimers();
+    expect(wrapper.find('.aka-popconfirm').exists()).toBeFalsy();
+    expect(onConfirm).toBeCalled();
+
+    triggerArea.trigger('click');
+    await vi.runAllTimers();
+    expect(wrapper.find('.aka-popconfirm').exists()).toBeTruthy();
+    const cancelButton = wrapper.find('.aka-popconfirm__cancel');
+    expect(cancelButton.exists()).toBeTruthy();
+
+    await vi.runAllTimers();
+    cancelButton.trigger('click');
+    await vi.runAllTimers();
+    expect(wrapper.find('.aka-popconfirm').exists()).toBeFalsy();
+    expect(onCancel).toBeCalled();
   });
 });

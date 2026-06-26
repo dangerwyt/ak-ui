@@ -56,6 +56,7 @@
         </div>
         <div class="aka-popconfirm__action">
           <aka-button
+            class="aka-popconfirm__cancel"
             :type="cancelButtonType"
             size="small"
             @click="handleCancel"
@@ -63,6 +64,7 @@
             {{ cancelButtonText }}
           </aka-button>
           <aka-button
+            class="aka-popconfirm__confirm"
             :type="confirmButtonType"
             size="small"
             @click="handleConfirm"
