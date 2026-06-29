@@ -7,6 +7,8 @@ import {
   AkaAlert,
   AkaTooltip,
   AkaPopconfirm,
+  AkaDropdown,
+  AkaDropdownItem,
 } from '@aka-element/components';
 import type { Plugin } from 'vue';
 
@@ -19,4 +21,6 @@ export default [
   AkaAlert,
   AkaTooltip,
   AkaPopconfirm,
+  AkaDropdown,
+  AkaDropdownItem,
 ] as Plugin[];

@@ -15,6 +15,8 @@
 
   import AkaDropdownItem from './DropdownItem.vue';
   import AkaTooltip from '../Tooltip/Tooltip.vue';
+
+  import { useDisabledStyle } from '@aka-element/hooks';
   defineOptions({
     name: 'AkaDropdown',
     inheritAttrs: false,
@@ -44,6 +46,8 @@
     handleItemClick,
     size: computed(() => props.size),
   });
+
+  !TEST && useDisabledStyle();
 
   defineExpose<DropdownInstance>({
     open: () => tooltipRef.value?.show(),
